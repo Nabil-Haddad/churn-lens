@@ -137,7 +137,3 @@ python ml_pipline/src/03_evaluate.py         # test-set eval + curves + SHAP
 [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) — 7,043 customers, 26.5% churn rate. Full methodology (EDA stages, cleaning decisions, design rationale) in [`PROJECT_SUMMARY.md`](PROJECT_SUMMARY.md).
 
 ---
-
-## License
-
-MIT — see [`LICENSE`](LICENSE).
