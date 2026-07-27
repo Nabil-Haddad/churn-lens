@@ -1,0 +1,6 @@
+model,fit_time_s,roc_auc_mean,roc_auc_std,roc_auc_train_mean,avg_precision_mean,avg_precision_std,avg_precision_train_mean,f1_mean,f1_std,f1_train_mean
+Logistic Regression,0.61,0.8491,0.0109,0.8536,0.6699,0.0168,0.6765,0.6267,0.0218,0.6392
+Gradient Boosting,0.77,0.8475,0.0113,0.8859,0.6686,0.0184,0.7542,0.5845,0.0259,0.6456
+Random Forest,0.74,0.8246,0.0109,0.9999,0.6235,0.0253,0.9996,0.5367,0.0234,0.9968
+KNN,0.29,0.7816,0.0097,0.9009,0.5212,0.0124,0.7258,0.5478,0.0093,0.676
+Dummy (majority),0.74,0.5,0.0,0.5,0.2654,0.0001,0.2654,0.0,0.0,0.0

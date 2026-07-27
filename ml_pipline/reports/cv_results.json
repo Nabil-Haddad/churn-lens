@@ -1,0 +1,77 @@
+{
+  "best_model_name": "Logistic Regression",
+  "best_params": {
+    "C": 10,
+    "penalty": "l2",
+    "solver": "liblinear"
+  },
+  "cv_folds": 5,
+  "primary_metric": "roc_auc",
+  "cv_results": [
+    {
+      "model": "Logistic Regression",
+      "fit_time_s": 0.61,
+      "roc_auc_mean": 0.8491,
+      "roc_auc_std": 0.0109,
+      "roc_auc_train_mean": 0.8536,
+      "avg_precision_mean": 0.6699,
+      "avg_precision_std": 0.0168,
+      "avg_precision_train_mean": 0.6765,
+      "f1_mean": 0.6267,
+      "f1_std": 0.0218,
+      "f1_train_mean": 0.6392
+    },
+    {
+      "model": "Gradient Boosting",
+      "fit_time_s": 0.77,
+      "roc_auc_mean": 0.8475,
+      "roc_auc_std": 0.0113,
+      "roc_auc_train_mean": 0.8859,
+      "avg_precision_mean": 0.6686,
+      "avg_precision_std": 0.0184,
+      "avg_precision_train_mean": 0.7542,
+      "f1_mean": 0.5845,
+      "f1_std": 0.0259,
+      "f1_train_mean": 0.6456
+    },
+    {
+      "model": "Random Forest",
+      "fit_time_s": 0.74,
+      "roc_auc_mean": 0.8246,
+      "roc_auc_std": 0.0109,
+      "roc_auc_train_mean": 0.9999,
+      "avg_precision_mean": 0.6235,
+      "avg_precision_std": 0.0253,
+      "avg_precision_train_mean": 0.9996,
+      "f1_mean": 0.5367,
+      "f1_std": 0.0234,
+      "f1_train_mean": 0.9968
+    },
+    {
+      "model": "KNN",
+      "fit_time_s": 0.29,
+      "roc_auc_mean": 0.7816,
+      "roc_auc_std": 0.0097,
+      "roc_auc_train_mean": 0.9009,
+      "avg_precision_mean": 0.5212,
+      "avg_precision_std": 0.0124,
+      "avg_precision_train_mean": 0.7258,
+      "f1_mean": 0.5478,
+      "f1_std": 0.0093,
+      "f1_train_mean": 0.676
+    },
+    {
+      "model": "Dummy (majority)",
+      "fit_time_s": 0.74,
+      "roc_auc_mean": 0.5,
+      "roc_auc_std": 0.0,
+      "roc_auc_train_mean": 0.5,
+      "avg_precision_mean": 0.2654,
+      "avg_precision_std": 0.0001,
+      "avg_precision_train_mean": 0.2654,
+      "f1_mean": 0.0,
+      "f1_std": 0.0,
+      "f1_train_mean": 0.0
+    }
+  ]
+}

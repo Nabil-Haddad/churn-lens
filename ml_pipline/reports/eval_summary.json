@@ -1,0 +1,26 @@
+{
+  "model_name": "Logistic Regression",
+  "best_params": {
+    "C": 10,
+    "penalty": "l2",
+    "solver": "liblinear"
+  },
+  "test_metrics": {
+    "auc_roc": 0.8449,
+    "avg_precision": 0.6592,
+    "precision_churn": 0.5052,
+    "recall_churn": 0.7861,
+    "f1_churn": 0.6151,
+    "precision_retained": 0.9033,
+    "recall_retained": 0.7217
+  },
+  "optimal_threshold": 0.5774618584746575,
+  "plots": [
+    "09_confusion_matrix.png",
+    "10_roc_curve.png",
+    "11_precision_recall_curve.png",
+    "12_threshold_analysis.png",
+    "13_shap_bar.png",
+    "14_shap_summary.png"
+  ]
+}
