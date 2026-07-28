@@ -41,7 +41,7 @@ Evaluated once on **1,409 held-out test customers**, never touched during traini
 The model catches **~79% of customers who actually churn**, at the cost of roughly one false alarm per correct flag. That trade-off is deliberate: the pipeline uses `class_weight="balanced"` on the reasoning that a *missed* churner costs more than an unnecessary retention offer.
 
 <div align="center">
-<img src="ml_pipline/reports/08_overfit_check.png" width="600" alt="Train vs. validation AUC-ROC per model"/>
+<img src="reports/08_overfit_check.png" width="600" alt="Train vs. validation AUC-ROC per model"/>
 <br><sub><b>Why Logistic Regression won:</b> Random Forest's near-perfect training score against a far lower validation score is the overfitting tell.</sub>
 </div>
 
@@ -76,7 +76,7 @@ Tuning (`GridSearchCV` over `C`, `penalty`, `solver`) moved CV AUC-ROC only marg
 Billing amount, internet plan type, and tenure dominate, with contract length as a secondary protective signal. The engineered `total_services` feature ranking 4th confirms "number of subscribed services" as a genuine stickiness proxy.
 
 <div align="center">
-<img src="ml_pipline/reports/13_shap_bar.png" width="600" alt="SHAP feature importance"/>
+<img src="reports/13_shap_bar.png" width="600" alt="SHAP feature importance"/>
 </div>
 
 ---
@@ -96,7 +96,7 @@ Most Telco-churn portfolios load the CSV, one-hot everything, fit a `RandomFores
 ## Project Structure
 
 ```
-ml_pipline/
+.
 ├── data/
 │   ├── raw/Telco_Data.csv          # source dataset (7043 × 21)
 │   └── processed/                  # df_clean.csv + train/test splits
@@ -121,19 +121,17 @@ cd churn-lens
 python -m venv .venv && source .venv/bin/activate   # or conda
 pip install -r requirements.txt
 
-python ml_pipline/src/01_preprocessing.py    # feature engineering, split, encoding
-python ml_pipline/src/02_train_crossval.py   # model selection + tuning -> best_model.pkl
-python ml_pipline/src/03_evaluate.py         # test-set eval + curves + SHAP
+python src/01_preprocessing.py             # feature engineering, split, encoding
+python "src/02_train crossval.py"          # model selection + tuning -> best_model.pkl
+python src/03_evaluate.py                  # test-set eval + curves + SHAP
 ```
 
 `random_state=42` is fixed throughout, so an end-to-end re-run reproduces the exact numbers above.
-
-> **Note:** the project folder is named `ml_pipline/` (a typo carried through the codebase). Commands use it as-is; if you rename it to `ml_pipeline/`, update the script path defaults accordingly.
 
 ---
 
 ## Dataset
 
-[Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) — 7,043 customers, 26.5% churn rate. Full methodology (EDA stages, cleaning decisions, design rationale) in [`PROJECT_SUMMARY.md`](PROJECT_SUMMARY.md).
+[Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) — 7,043 customers, 26.5% churn rate. Full methodology (EDA stages, cleaning decisions, design rationale) in [`PROJECT_SUMMARY.md`](reports/PROJECT_SUMMARY.md).
 
 ---

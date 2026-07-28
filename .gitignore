@@ -23,10 +23,10 @@ Thumbs.db
 
 # Generated pipeline artifacts — reproducible by re-running the scripts,
 # not needed in version control (binary, non-diffable, can be large).
-ml_pipline/data/processed/
-ml_pipline/models/
+data/processed/
+models/
 
 # Report plots/JSON/CSV ARE tracked on purpose — they're the results
 # deliverable referenced in RESULTS.md.
-ml_pipline/reports/screenshots/
+reports/screenshots/
 
